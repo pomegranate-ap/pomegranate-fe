@@ -22,8 +22,8 @@ export default {
   computed: {
     localeDateString () {
       return typeof this.time === 'string'
-        ? new Date(Date.parse(this.time)).toLocaleString()
-        : this.time.toLocaleString()
+        ? new Date(Date.parse(this.time)).toLocaleString(this.$i18n.locale)
+        : this.time.toLocaleString(this.$i18n.locale)
     }
   },
   created () {

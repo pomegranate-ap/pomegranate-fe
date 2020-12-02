@@ -37,7 +37,7 @@ const SecurityTab = {
         return {
           id: oauthToken.id,
           appName: oauthToken.app_name,
-          validUntil: new Date(oauthToken.valid_until).toLocaleDateString()
+          validUntil: new Date(oauthToken.valid_until).toLocaleDateString(this.$i18n.locale)
         }
       })
     }
